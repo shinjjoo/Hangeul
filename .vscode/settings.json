@@ -1,0 +1,12 @@
+{
+  "git.enabled": true,
+  "git.autoRepositoryDetection": "all",
+  "git.openRepositoryInParentFolders": "always",
+  "git.path": "/usr/bin/git",
+  "git.scanRepositories": [
+    "/Users/shinjoohan/antigravity/Hangeul",
+    "/Users/shinjoohan/antigravity/Hangeul/.worktrees/ui-design",
+    "/Users/shinjoohan/antigravity/Hangeul/.worktrees/audio-interactive",
+    "/Users/shinjoohan/antigravity/Hangeul/.worktrees/hangeul-quiz"
+  ]
+}

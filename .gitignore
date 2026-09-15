@@ -1,0 +1,24 @@
+# Node.js 패키지 의존성 폴더
+node_modules/
+
+# 빌드 산출물
+dist/
+dist-ssr/
+*.local
+
+# 로그 파일
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 환경 변수 설정 파일 (보안을 위해 커밋 제외)
+.env
+.env.local
+.env.production
+
+# 에디터 및 OS 설정 파일
+.DS_Store
+.idea/
+
+# 에이전트 전용 작업 폴더 (Git Worktree 디렉토리)
+.worktrees/
