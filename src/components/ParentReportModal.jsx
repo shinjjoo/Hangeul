@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { getStudentProfile, saveStudentProfile, getDailyProgress, analyzeWeakAreas } from '../utils/secureStorage';
+import { 
+  getCurrentStudent, getDailyProgress, analyzeWeakAreas 
+} from '../utils/secureStorage';
 import { CURRICULUM_20_DAYS } from '../data/curriculum20Days';
-import { Printer, X, Award, Sparkles, BookOpen, AlertCircle, Heart, CheckCircle2, Calendar, Clock, Check } from 'lucide-react';
+import { 
+  Printer, X, Award, Sparkles, AlertCircle, Heart, CheckCircle2, Calendar, Clock, RotateCcw 
+} from 'lucide-react';
 
 /**
- * [학부모용 20일 완성 한글 배움 리포트 모달]
- * 1일 20분 기준으로 20일간 진행된 아이의 일일 진도,
- * 매일 학습 평가 점수 및 가정 연계 지도 조언을 담아
- * 바로 A4 용지로 인쇄할 수 있는 공식 학부모 통지표입니다.
+ * [학부모용 20일 완성 한글 배움 성장 통지표 모달]
+ * 1일 30분 기준으로 20일간 진행된 학생의 정규 학습 진도,
+ * 일일 형성평가 점수, 10분 쑥쑥 보충학습 이수 현황 및
+ * 맞춤 가정 연계 지도 조언을 담아 A4 용지로 즉시 인쇄 가능한 공식 통지표입니다.
  */
 export default function ParentReportModal({ onClose }) {
-  const [profile, setProfile] = useState(getStudentProfile());
-  const [isEditingProfile, setIsEditingProfile] = useState(false);
-  const [nameInput, setNameInput] = useState(profile.name);
-  const [classInput, setClassInput] = useState(profile.className);
-  
+  const currentStudent = getCurrentStudent();
   const dailyProgress = getDailyProgress();
   const analysis = analyzeWeakAreas();
 
@@ -22,31 +22,22 @@ export default function ParentReportModal({ onClose }) {
   const currentDayNum = Math.max(1, dailyProgress.lastCompletedDay || 1);
   const currentDayData = CURRICULUM_20_DAYS.find((d) => d.day === currentDayNum) || CURRICULUM_20_DAYS[0];
 
-  // 학생 프로필 암호화 저장
-  const handleSaveProfile = (e) => {
-    e.preventDefault();
-    const updated = { ...profile, name: nameInput, className: classInput };
-    saveStudentProfile(updated);
-    setProfile(updated);
-    setIsEditingProfile(false);
-  };
-
   // 인쇄 실행
   const handlePrint = () => {
     window.print();
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto print:p-0 print:bg-white print:static">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto print:p-0 print:bg-white print:static animate-fade-in">
       <div className="bg-white rounded-3xl shadow-2xl border-4 border-amber-300 max-w-2xl w-full p-6 sm:p-8 my-8 relative print:border-none print:shadow-none print:max-w-none print:p-2">
         {/* 상단 닫기 및 인쇄 버튼 (화면용) */}
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-amber-100 print:hidden">
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow transition-all active:scale-95"
+            className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm rounded-xl shadow transition-all active:scale-95"
           >
             <Printer className="w-4 h-4" />
-            <span>A4 통지표 인쇄하기</span>
+            <span>A4 통지표 인쇄하기 🖨️</span>
           </button>
 
           {onClose && (
@@ -65,85 +56,60 @@ export default function ParentReportModal({ onClose }) {
         <div className="space-y-6 text-slate-800 font-sans">
           {/* 1. 통지표 헤더 */}
           <div className="text-center border-b-4 border-double border-amber-300 pb-4">
-            <span className="text-xs font-black text-amber-700 tracking-widest bg-amber-100 px-3 py-1 rounded-full uppercase">
-              초등 1학년 20일 완성 가정 연계 공식 리포트
+            <span className="text-xs font-black text-amber-800 tracking-widest bg-amber-100 px-3 py-1 rounded-full uppercase">
+              초등 1학년 20일 완성 공식 가정 연계 리포트
             </span>
             <h1 className="text-3xl font-black text-amber-950 mt-2">
               쑥쑥 한글 20일 배움 성장 통지표
             </h1>
-            <p className="text-xs text-slate-500 mt-1">
-              "1일 20분, 기초 자모음부터 받침 있는 낱말까지 차근차근 다져가는 배움의 기록입니다."
+            <p className="text-xs text-slate-500 mt-1 font-bold">
+              "1일 30분 루틴 (소리 ➔ 쓰기 ➔ 낱말카드 ➔ 평가) 및 10분 보충학습 연계 성장 기록"
             </p>
           </div>
 
           {/* 2. 학생 인적 사항 */}
-          <div className="bg-amber-50/70 p-4 rounded-2xl border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-            {!isEditingProfile ? (
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-amber-400 text-amber-950 font-black flex items-center justify-center text-xl shadow-sm">
-                  🧒
+          <div className="bg-amber-50/70 p-4 rounded-2xl border border-amber-200 flex items-center justify-between">
+            <div className="flex items-center gap-3.5">
+              <div className="w-14 h-14 rounded-2xl bg-amber-400 text-amber-950 font-black flex items-center justify-center text-3xl shadow-sm border-2 border-amber-300">
+                {currentStudent.avatar || '🐯'}
+              </div>
+              <div>
+                <div className="text-lg font-black text-amber-950">
+                  {currentStudent.gradeClass || '1학년 1반'}{' '}
+                  <span className="text-indigo-700 underline decoration-amber-400">{currentStudent.name}</span> 어린이
                 </div>
-                <div>
-                  <div className="text-lg font-black text-amber-950">
-                    {profile.grade} {profile.className} <span className="text-indigo-700">{profile.name}</span> 어린이
-                  </div>
-                  <span className="text-xs text-slate-500">학생 정보 암호화 보관 완료 🔒</span>
+                <div className="text-xs text-slate-500 font-bold flex items-center gap-2 mt-0.5">
+                  <span>단짝 캐릭터: {currentStudent.characterName || '호치'}</span>
+                  <span>•</span>
+                  <span className="text-emerald-700">보안 암호화 보관 완료 🔒</span>
                 </div>
               </div>
-            ) : (
-              <form onSubmit={handleSaveProfile} className="flex items-center gap-2 w-full">
-                <input
-                  type="text"
-                  value={classInput}
-                  onChange={(e) => setClassInput(e.target.value)}
-                  placeholder="예: 1반"
-                  className="w-24 px-3 py-1.5 rounded-xl border border-amber-300 text-sm font-bold"
-                />
-                <input
-                  type="text"
-                  value={nameInput}
-                  onChange={(e) => setNameInput(e.target.value)}
-                  placeholder="학생 이름"
-                  className="flex-1 px-3 py-1.5 rounded-xl border border-amber-300 text-sm font-bold"
-                />
-                <button
-                  type="submit"
-                  className="px-3 py-1.5 bg-amber-500 text-white font-bold rounded-xl text-xs"
-                >
-                  저장
-                </button>
-              </form>
-            )}
-
-            {!isEditingProfile && (
-              <button
-                onClick={() => setIsEditingProfile(true)}
-                className="text-xs font-bold text-amber-700 hover:text-amber-900 underline print:hidden"
-              >
-                이름 변경
-              </button>
-            )}
+            </div>
           </div>
 
           {/* 3. 20일 완주 종합 진도율 요약 카드 */}
           <div className="grid grid-cols-3 gap-3 text-center">
-            <div className="bg-white p-3.5 rounded-2xl border-2 border-amber-200 shadow-sm">
-              <span className="text-xs font-bold text-slate-500">20일 완주 진도율</span>
+            <div className="bg-white p-3.5 rounded-2xl border-2 border-amber-200 shadow-xs">
+              <span className="text-xs font-bold text-slate-500">20일 완주 달성률</span>
               <div className="text-2xl font-black text-amber-600 mt-1">
-                {Object.keys(dailyProgress.days).length} / 20일
+                {analysis.passedDaysCount || 0} / 20일
               </div>
               <span className="text-[10px] text-amber-800 font-bold">
-                ({Math.round((Object.keys(dailyProgress.days).length / 20) * 100)}% 달성)
+                ({analysis.progressPercentage || 0}% 정규 통과)
               </span>
             </div>
 
-            <div className="bg-white p-3.5 rounded-2xl border-2 border-indigo-200 shadow-sm">
+            <div className="bg-white p-3.5 rounded-2xl border-2 border-indigo-200 shadow-xs">
               <span className="text-xs font-bold text-slate-500">평균 평가 성취도</span>
-              <div className="text-2xl font-black text-indigo-600 mt-1">{analysis.averageScore || 100}%</div>
-              <span className="text-[10px] text-indigo-800 font-bold">참 잘하고 있어요!</span>
+              <div className="text-2xl font-black text-indigo-600 mt-1">
+                {analysis.averageScore || 100}%
+              </div>
+              <span className="text-[10px] text-indigo-800 font-bold">
+                {analysis.remedialDaysCount > 0 ? `보충 완료 ${analysis.remedialDaysCount}회` : '성실히 잘하고 있어요!'}
+              </span>
             </div>
 
-            <div className="bg-white p-3.5 rounded-2xl border-2 border-emerald-200 shadow-sm">
+            <div className="bg-white p-3.5 rounded-2xl border-2 border-emerald-200 shadow-xs">
               <span className="text-xs font-bold text-slate-500">현재 학습 단계</span>
               <div className="text-xs font-black text-emerald-700 mt-2 truncate">
                 {currentDayData.title}
@@ -153,34 +119,41 @@ export default function ParentReportModal({ onClose }) {
           </div>
 
           {/* 4. 20일 일일 평가 성취도 달력 (1일차~20일차 전 현황) */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
+          <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-black text-slate-700 flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-amber-600" />
-                20일 일일 평가 성취도 달력
+                20일 일일 평가 & 보충학습 성취도 달력
               </span>
-              <span className="text-[11px] text-slate-400 font-bold">1일 20분 루틴</span>
+              <span className="text-[11px] text-slate-400 font-bold">1일 30분 표준 루틴</span>
             </div>
 
             <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
               {CURRICULUM_20_DAYS.map((d) => {
                 const dayResult = dailyProgress.days[d.day];
-                const isCompleted = !!dayResult;
+                const isPassed = !!dayResult?.passed;
+                const isRemedial = !!dayResult?.remedialCompleted;
+                const isCompleted = !!dayResult?.completed;
+
                 return (
                   <div
                     key={d.day}
-                    className={`p-2 rounded-xl text-center border flex flex-col items-center justify-between min-h-[52px] ${
-                      isCompleted
+                    className={`p-2 rounded-xl text-center border flex flex-col items-center justify-between min-h-[56px] ${
+                      isPassed
                         ? 'bg-emerald-50 border-emerald-300 text-emerald-950'
+                        : isRemedial
+                        ? 'bg-orange-50 border-orange-300 text-orange-950'
+                        : isCompleted
+                        ? 'bg-amber-50 border-amber-300 text-amber-950'
                         : 'bg-slate-50 border-slate-200 text-slate-400'
                     }`}
                   >
                     <span className="text-[10px] font-black">{d.day}일</span>
                     <div className="text-xs">
-                      {isCompleted ? '💮' : d.day === 20 ? '👑' : '·'}
+                      {isPassed ? '💮' : isRemedial ? '🌟' : d.day === 20 ? '👑' : '·'}
                     </div>
                     <span className="text-[9px] font-bold">
-                      {isCompleted ? `${dayResult.percentage}점` : '대기'}
+                      {isPassed ? `${dayResult.percentage}점` : isRemedial ? '보충완료' : '대기'}
                     </span>
                   </div>
                 );
@@ -188,7 +161,7 @@ export default function ParentReportModal({ onClose }) {
             </div>
           </div>
 
-          {/* 5. 학부모님을 위한 오늘의 맞춤형 가정 지도 조언문 (핵심 교사 꿀팁) */}
+          {/* 5. 학부모님을 위한 오늘의 맞춤형 가정 지도 조언문 (핵심 교사 팁) */}
           <div className="bg-amber-100/70 p-5 rounded-2xl border-2 border-amber-300 space-y-2">
             <h4 className="text-sm font-black text-amber-950 flex items-center gap-1.5">
               <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
@@ -198,9 +171,9 @@ export default function ParentReportModal({ onClose }) {
               📢 {currentDayData.parentAdvice}
             </p>
             <div className="text-[11px] text-slate-600 bg-white/60 p-3 rounded-xl space-y-1">
-              <p>💡 <strong>1학년 20분 학습 성공 원칙:</strong></p>
-              <p>• 아이가 20분 동안 공부를 마쳤다면, 결과와 상관없이 <strong>"오늘 20분 약속을 멋지게 지켰네!"</strong> 하고 노력을 칭찬해 주세요.</p>
-              <p>• 틀린 글자가 있더라도 <strong>"다시 소리를 들어보자!"</strong> 하며 아이의 자존감을 지켜주세요.</p>
+              <p>💡 <strong>1학년 30분 학습 성공 지도 원칙:</strong></p>
+              <p>• <strong>1. 소리(5분) ➔ 2. 쓰기(10분) ➔ 3. 카드(8분) ➔ 4. 평가(7분)</strong> 흐름을 아이가 즐겁게 완료했을 때 마음껏 칭찬해 주세요.</p>
+              <p>• 혹시 평가에서 실수를 하더라도 <strong>"10분 마법 보충학습에서 다시 짚어보면 금방 알아!"</strong> 하고 자신감을 심어주세요.</p>
             </div>
           </div>
 
