@@ -518,46 +518,43 @@ export default function DailyProgram({ onEarnStar, onOpenReport, onOpenStudentMa
     ];
 
     return (
-      <div className="bg-white rounded-3xl p-4 sm:p-5 border-2 border-amber-200 shadow-md mb-6 animate-fade-in">
-        <div className="flex items-center justify-between pb-3 border-b border-amber-100 mb-3">
-          <div className="flex items-center gap-2">
+      <div className="bg-white rounded-3xl p-3.5 sm:p-5 border-2 border-amber-200 shadow-md mb-6 animate-fade-in">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-amber-100 mb-3">
+          <div className="flex items-center gap-2 min-w-0">
             <button
               onClick={() => setSessionStep('map')}
-              className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-xs transition-colors"
+              className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-xs transition-colors shrink-0 whitespace-nowrap"
             >
-              ← 로드맵으로
+              ← 로드맵
             </button>
-            <span className="font-black text-amber-950 text-sm sm:text-base">
+            <span className="font-black text-amber-950 text-sm sm:text-base truncate whitespace-nowrap">
               {dayData.day}일차: {dayData.title}
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-            <Clock className="w-3.5 h-3.5 text-amber-600" />
-            <span>오늘의 30분 집중 코스</span>
+          <div className="flex items-center gap-1.5 text-xs font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 shrink-0 whitespace-nowrap self-start sm:self-auto">
+            <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <span className="whitespace-nowrap">오늘의 30분 집중 코스</span>
           </div>
         </div>
 
-        {/* 4단계 스텝 바 */}
-        <div className="grid grid-cols-4 gap-2">
+        {/* 4단계 스텝 바 - 절대로 2줄로 나뉘지 않는 가로 1줄 배치 */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {steps.map((st) => {
             const Icon = st.icon;
             const isCurrent = sessionStep === st.key;
             return (
               <div
                 key={st.key}
-                className={`p-2 rounded-2xl flex flex-col items-center justify-center text-center transition-all ${
+                className={`py-2 px-2.5 rounded-2xl flex items-center justify-center gap-1.5 text-center transition-all whitespace-nowrap overflow-hidden ${
                   isCurrent
                     ? 'bg-amber-400 text-amber-950 font-black shadow-md ring-2 ring-amber-300 scale-102'
                     : 'bg-slate-50 text-slate-400 font-bold'
                 }`}
               >
-                <div className="flex items-center gap-1 text-xs">
-                  <Icon className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">{st.label}</span>
-                  <span className="sm:hidden">{st.label.split('.')[0]}</span>
-                </div>
-                <span className="text-[10px] opacity-80">{st.time}</span>
+                <Icon className="w-3.5 h-3.5 shrink-0" />
+                <span className="text-xs sm:text-sm font-black whitespace-nowrap">{st.label}</span>
+                <span className="text-[10px] sm:text-xs opacity-75 font-bold whitespace-nowrap">({st.time})</span>
               </div>
             );
           })}
@@ -1043,16 +1040,19 @@ export default function DailyProgram({ onEarnStar, onOpenReport, onOpenStudentMa
           </button>
         </div>
 
-        {/* 보충 3단계 진행 바 */}
+        {/* 보충 3단계 진행 바 - 1줄 가로 배치 */}
         <div className="grid grid-cols-3 gap-2 bg-white p-3 rounded-2xl border-2 border-orange-200">
-          <div className={`p-2 rounded-xl text-center text-xs font-black ${remedialStep === 1 ? 'bg-orange-400 text-white' : 'bg-slate-50 text-slate-400'}`}>
-            1. 소리 다시 듣기 (3분)
+          <div className={`py-2 px-1.5 rounded-xl text-center text-xs font-black whitespace-nowrap flex items-center justify-center gap-1 overflow-hidden ${remedialStep === 1 ? 'bg-orange-400 text-white shadow-xs' : 'bg-slate-50 text-slate-400'}`}>
+            <span>1. 소리 복습</span>
+            <span className="text-[10px] opacity-80">(3분)</span>
           </div>
-          <div className={`p-2 rounded-xl text-center text-xs font-black ${remedialStep === 2 ? 'bg-orange-400 text-white' : 'bg-slate-50 text-slate-400'}`}>
-            2. 크게 따라쓰기 (4분)
+          <div className={`py-2 px-1.5 rounded-xl text-center text-xs font-black whitespace-nowrap flex items-center justify-center gap-1 overflow-hidden ${remedialStep === 2 ? 'bg-orange-400 text-white shadow-xs' : 'bg-slate-50 text-slate-400'}`}>
+            <span>2. 크게 쓰기</span>
+            <span className="text-[10px] opacity-80">(4분)</span>
           </div>
-          <div className={`p-2 rounded-xl text-center text-xs font-black ${remedialStep === 3 ? 'bg-orange-400 text-white' : 'bg-slate-50 text-slate-400'}`}>
-            3. 재도전 확인 (3분)
+          <div className={`py-2 px-1.5 rounded-xl text-center text-xs font-black whitespace-nowrap flex items-center justify-center gap-1 overflow-hidden ${remedialStep === 3 ? 'bg-orange-400 text-white shadow-xs' : 'bg-slate-50 text-slate-400'}`}>
+            <span>3. 재도전</span>
+            <span className="text-[10px] opacity-80">(3분)</span>
           </div>
         </div>
 
