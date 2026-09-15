@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import SoundStudy from './components/SoundStudy';
+import DailyProgram from './components/DailyProgram';
 import FlashCards from './components/FlashCards';
 import CombineGame from './components/CombineGame';
 import TracingCanvas from './components/TracingCanvas';
-import QuizGame from './components/QuizGame';
 import Assessment from './components/Assessment';
 import StickerBook from './components/StickerBook';
 import ParentReportModal from './components/ParentReportModal';
@@ -12,19 +11,21 @@ import { Smile } from 'lucide-react';
 
 /**
  * [메인 App 컴포넌트]
- * 1학년 학생들의 한글 기초 학습을 위한 7대 핵심 모드와
- * 학부모 가정 연계 안내 통지표를 총괄 관리하는 메인 화면입니다.
+ * '20일 완성 하루 20분 한글 마스터 프로그램'을 핵심 중심축으로 두고,
+ * 낱말 카드, 글자 합체 마법, 따라 쓰기, 수준별 평가, 칭찬 스티커 및
+ * 학부모 가정 연계 리포트를 총괄 제공하는 메인 뷰입니다.
  */
 export default function App() {
-  const [currentTab, setCurrentTab] = useState('flashcards'); // 받침 없는 낱말 카드를 기본 학습으로 진입
-  const [isReportOpen, setIsReportOpen] = useState(false); // 학부모 통지표 모달 열림 여부
+  // 기본 첫 화면: 20일 완성 데일리 코스
+  const [currentTab, setCurrentTab] = useState('daily20');
+  const [isReportOpen, setIsReportOpen] = useState(false); // 학부모 통지표 모달
   const [starsCount, setStarsCount] = useState(() => {
-    // 로컬 스토리지에서 기존 별 점수 불러오기
+    // 로컬 스토리지에서 별 점수 불러오기
     const saved = localStorage.getItem('hangeul_stars');
-    return saved ? parseInt(saved, 10) : 2; // 처음 온 어린이에게 환영 별 2개 지급!
+    return saved ? parseInt(saved, 10) : 5; // 환영 선물로 별 5개 지급!
   });
 
-  // 별 점수 변경 시 로컬 스토리지에 자동 저장
+  // 별 점수 로컬 스토리지 동기화
   useEffect(() => {
     localStorage.setItem('hangeul_stars', starsCount.toString());
   }, [starsCount]);
@@ -47,11 +48,15 @@ export default function App() {
 
         {/* 메인 학습 콘텐츠 영역 */}
         <main className="max-w-4xl mx-auto px-4 py-6 sm:py-8">
-          {currentTab === 'sound' && <SoundStudy onEarnStar={handleEarnStar} />}
+          {currentTab === 'daily20' && (
+            <DailyProgram 
+              onEarnStar={handleEarnStar} 
+              onOpenReport={() => setIsReportOpen(true)} 
+            />
+          )}
           {currentTab === 'flashcards' && <FlashCards onEarnStar={handleEarnStar} />}
           {currentTab === 'combine' && <CombineGame onEarnStar={handleEarnStar} />}
           {currentTab === 'trace' && <TracingCanvas onEarnStar={handleEarnStar} />}
-          {currentTab === 'quiz' && <QuizGame onEarnStar={handleEarnStar} />}
           {currentTab === 'assessment' && (
             <Assessment 
               onOpenReport={() => setIsReportOpen(true)} 
@@ -62,7 +67,7 @@ export default function App() {
         </main>
       </div>
 
-      {/* 학부모 안내 통지표 모달 */}
+      {/* 학부모 20일 배움 성장 리포트 모달 */}
       {isReportOpen && (
         <ParentReportModal onClose={() => setIsReportOpen(false)} />
       )}
@@ -71,10 +76,10 @@ export default function App() {
       <footer className="bg-white/80 border-t border-amber-200 py-6 text-center text-sm text-slate-500 mt-12 print:hidden">
         <div className="flex items-center justify-center gap-1.5 font-bold text-amber-800 mb-1">
           <Smile className="w-4 h-4 text-amber-600" />
-          <span>매일매일 한 글자씩 쑥쑥 자라는 우리들의 한글 실력!</span>
+          <span>매일매일 20분씩 한 글자씩 쑥쑥 자라는 우리들의 한글 실력!</span>
         </div>
         <p className="text-xs text-slate-400">
-          초등학교 1학년 눈높이 맞춤 한글 교육용 앱 • 5대 전문 에이전트 협업 시스템
+          초등학교 1학년 20일 완성 한글 마스터 프로그램 • 학교-가정 연계 시스템
         </p>
       </footer>
     </div>
