@@ -775,29 +775,31 @@ export default function DailyProgram({ onEarnStar, onOpenReport, onOpenStudentMa
             className="w-full max-w-sm h-64 sm:h-72 mx-auto bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl border-4 border-amber-300 shadow-lg p-6 flex flex-col items-center justify-center gap-3 cursor-pointer hover:shadow-xl transition-all transform hover:scale-102"
           >
             {!isCardFlipped ? (
-              /* 카드 앞면: 이모지 & 힌트 */
-              <div className="space-y-3 animate-fade-in">
-                <span className="text-6xl sm:text-7xl block">{currentWord.emoji}</span>
-                <span className="text-xs font-bold text-amber-800 bg-amber-200/80 px-3 py-1 rounded-full inline-block">
-                  💡 {currentWord.hint}
+              /* 카드 앞면: 초대형 한글 단어 먼저 등장! */
+              <div className="space-y-4 animate-fade-in my-auto py-2">
+                <span className="text-xs font-black text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full inline-block border border-indigo-200">
+                  글자를 보고 소리 내어 읽어보세요!
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-black text-slate-800">
+                <h3 className="text-6xl sm:text-7xl font-black text-amber-950 tracking-wider">
                   {currentWord.word}
                 </h3>
                 <span className="text-xs font-bold text-slate-400 block">
-                  (터치하여 소리와 낱자 분해 보기)
+                  👆 터치하면 그림과 낱자 마법이 나타나요!
                 </span>
               </div>
             ) : (
-              /* 카드 뒷면: 분절 & 소리 */
-              <div className="space-y-4 animate-fade-in">
-                <span className="text-4xl block">✨</span>
-                <h3 className="text-4xl sm:text-5xl font-black text-indigo-700">
+              /* 카드 뒷면: 그림(이모지) & 힌트 설명 & 분절 */
+              <div className="space-y-3 animate-jelly my-auto py-2">
+                <span className="text-5xl sm:text-6xl block">{currentWord.emoji}</span>
+                <h3 className="text-3xl sm:text-4xl font-black text-indigo-700">
                   {currentWord.word}
                 </h3>
-                <div className="bg-white/90 px-4 py-2 rounded-2xl border border-indigo-200">
-                  <span className="text-xs font-bold text-slate-500 block mb-0.5">낱자 합체 비밀:</span>
-                  <span className="text-base font-black text-indigo-900">
+                <p className="text-xs sm:text-sm font-black text-amber-900 bg-white/90 px-3 py-1.5 rounded-xl border border-amber-200 inline-block">
+                  💡 {currentWord.hint}
+                </p>
+                <div className="bg-white/90 px-3 py-1.5 rounded-xl border border-indigo-200">
+                  <span className="text-[11px] font-bold text-slate-500 block">낱자 합체 비밀:</span>
+                  <span className="text-sm font-black text-indigo-900">
                     {currentWord.breakdown}
                   </span>
                 </div>
@@ -806,7 +808,7 @@ export default function DailyProgram({ onEarnStar, onOpenReport, onOpenStudentMa
                     e.stopPropagation();
                     playAudio(currentWord.word);
                   }}
-                  className="px-4 py-1.5 rounded-full bg-indigo-500 text-white text-xs font-black flex items-center gap-1 mx-auto"
+                  className="px-4 py-1 rounded-full bg-indigo-500 text-white text-xs font-black flex items-center gap-1 mx-auto shadow-xs"
                 >
                   <Volume2 className="w-3.5 h-3.5" />
                   소리 다시 듣기
