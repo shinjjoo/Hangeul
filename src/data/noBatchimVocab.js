@@ -1,9 +1,9 @@
 /**
- * [초등 1학년 필수 받침 없는 단어 118선 데이터베이스 v2]
- * 초등 1학년 한글 미해득 아동을 위해 종성(받침)이 전혀 없는 순수 개음절 단어 118선입니다.
+ * [초등 1학년 필수 받침 없는 단어 150선 공식 데이터베이스 v3]
+ * 초등 1학년 한글 미해득 아동(최재우 학생 맞춤)을 위해 종성(받침)이 전혀 없는 순수 개음절 단어 150선입니다.
  * - 단어가 큰 글씨로 먼저 노출되고, 선택 시 그림과 친절한 1학년 눈높이 설명 제공
  * - 주제별(동물, 음식, 자연, 사물, 탈것, 신체, 가족) 7대 영역 분류
- * - 단계별(🌱 1단계 기초 씨앗 ➔ 🌿 2단계 새싹 자모 확장 ➔ 🌳 3단계 꽃잎 3음절 이상) 분류
+ * - 단계별(🌱 1단계 기초 씨앗 ➔ 🌿 2단계 새싹 자모 확장 ➔ 🌳 3단계 꽃잎 열매) 분류
  */
 
 export const NO_BATCHIM_VOCAB = [
@@ -666,6 +666,202 @@ export const NO_BATCHIM_VOCAB = [
   },
   {
     "id": "nb28",
+    "word": "소",
+    "stage": 1,
+    "category": "동물",
+    "emoji": "🐂",
+    "hint": "음머 울며 착하고 힘이 센 동물",
+    "description": "커다란 눈망울로 '음머~' 소리 내며 풀을 맛있게 먹고 우유를 선물해 주는 고마운 동물이에요.",
+    "syllables": [
+      {
+        "char": "소",
+        "cho": "ㅅ",
+        "jung": "ㅗ",
+        "breakdown": "ㅅ + ㅗ"
+      }
+    ]
+  },
+  {
+    "id": "nb29",
+    "word": "새",
+    "stage": 2,
+    "category": "동물",
+    "emoji": "🕊️",
+    "hint": "하늘을 펄펄 날아다니는 날개 달린 동물",
+    "description": "가벼운 날개로 파란 하늘을 훨훨 날아다니며 나뭇가지에 앉아 맑은 소리로 노래해요.",
+    "syllables": [
+      {
+        "char": "새",
+        "cho": "ㅅ",
+        "jung": "ㅐ",
+        "breakdown": "ㅅ + ㅐ"
+      }
+    ]
+  },
+  {
+    "id": "nb30",
+    "word": "사마귀",
+    "stage": 3,
+    "category": "동물",
+    "emoji": "🦗",
+    "hint": "앞다리를 번쩍 든 숲속의 사냥꾼 곤충",
+    "description": "초록빛 몸에 날카로운 톱니 앞다리를 번쩍 들고 풀숲에 숨어 있는 곤충이에요.",
+    "syllables": [
+      {
+        "char": "사",
+        "cho": "ㅅ",
+        "jung": "ㅏ",
+        "breakdown": "ㅅ + ㅏ"
+      },
+      {
+        "char": "마",
+        "cho": "ㅁ",
+        "jung": "ㅏ",
+        "breakdown": "ㅁ + ㅏ"
+      },
+      {
+        "char": "귀",
+        "cho": "ㄱ",
+        "jung": "ㅟ",
+        "breakdown": "ㄱ + ㅟ"
+      }
+    ]
+  },
+  {
+    "id": "nb31",
+    "word": "메뚜기",
+    "stage": 3,
+    "category": "동물",
+    "emoji": "🦗",
+    "hint": "가을 들판에서 높이 폴짝 뛰어요",
+    "description": "튼튼한 뒷다리로 가을 벼 이삭 사이를 '폴짝폴짝' 높이 뛰어다니는 풀숲 친구예요.",
+    "syllables": [
+      {
+        "char": "메",
+        "cho": "ㅁ",
+        "jung": "ㅔ",
+        "breakdown": "ㅁ + ㅔ"
+      },
+      {
+        "char": "뚜",
+        "cho": "ㄸ",
+        "jung": "ㅜ",
+        "breakdown": "ㄸ + ㅜ"
+      },
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb32",
+    "word": "두루미",
+    "stage": 3,
+    "category": "동물",
+    "emoji": "🦩",
+    "hint": "다리와 목이 길고 우아한 하얀 새",
+    "description": "눈처럼 하얀 깃털과 긴 다리로 물가에서 우아하게 춤추는 아름다운 겨울 철새예요.",
+    "syllables": [
+      {
+        "char": "두",
+        "cho": "ㄷ",
+        "jung": "ㅜ",
+        "breakdown": "ㄷ + ㅜ"
+      },
+      {
+        "char": "루",
+        "cho": "ㄹ",
+        "jung": "ㅜ",
+        "breakdown": "ㄹ + ㅜ"
+      },
+      {
+        "char": "미",
+        "cho": "ㅁ",
+        "jung": "ㅣ",
+        "breakdown": "ㅁ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb33",
+    "word": "소라",
+    "stage": 1,
+    "category": "동물",
+    "emoji": "🐚",
+    "hint": "귀에 대면 바다 파도 소리가 나요",
+    "description": "돌돌 말린 단단한 껍질 속에 살며, 귀에 대면 '쏴아' 신비한 바다 소리를 들려줘요.",
+    "syllables": [
+      {
+        "char": "소",
+        "cho": "ㅅ",
+        "jung": "ㅗ",
+        "breakdown": "ㅅ + ㅗ"
+      },
+      {
+        "char": "라",
+        "cho": "ㄹ",
+        "jung": "ㅏ",
+        "breakdown": "ㄹ + ㅏ"
+      }
+    ]
+  },
+  {
+    "id": "nb34",
+    "word": "조개",
+    "stage": 2,
+    "category": "동물",
+    "emoji": "🦪",
+    "hint": "두 장의 껍데기를 딱딱 여닫아요",
+    "description": "바닷속 모래 속에 숨어 있다가 물이 들어오면 입을 뻐끔 열어 숨을 쉬는 생물이에요.",
+    "syllables": [
+      {
+        "char": "조",
+        "cho": "ㅈ",
+        "jung": "ㅗ",
+        "breakdown": "ㅈ + ㅗ"
+      },
+      {
+        "char": "개",
+        "cho": "ㄱ",
+        "jung": "ㅐ",
+        "breakdown": "ㄱ + ㅐ"
+      }
+    ]
+  },
+  {
+    "id": "nb35",
+    "word": "따오기",
+    "stage": 3,
+    "category": "동물",
+    "emoji": "🦩",
+    "hint": "부리가 길고 아래로 살짝 굽은 귀한 새",
+    "description": "분홍빛 깃털에 긴 부리로 논밭을 거닐며 미꾸라지를 쏙 잡아먹는 소중한 천연기념물 새예요.",
+    "syllables": [
+      {
+        "char": "따",
+        "cho": "ㄸ",
+        "jung": "ㅏ",
+        "breakdown": "ㄸ + ㅏ"
+      },
+      {
+        "char": "오",
+        "cho": "ㅇ",
+        "jung": "ㅗ",
+        "breakdown": "ㅇ + ㅗ"
+      },
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb36",
     "word": "사과",
     "stage": 2,
     "category": "음식",
@@ -688,7 +884,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb29",
+    "id": "nb37",
     "word": "바나나",
     "stage": 3,
     "category": "음식",
@@ -717,7 +913,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb30",
+    "id": "nb38",
     "word": "포도",
     "stage": 1,
     "category": "음식",
@@ -740,7 +936,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb31",
+    "id": "nb39",
     "word": "오이",
     "stage": 1,
     "category": "음식",
@@ -763,7 +959,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb32",
+    "id": "nb40",
     "word": "토마토",
     "stage": 3,
     "category": "음식",
@@ -792,7 +988,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb33",
+    "id": "nb41",
     "word": "자두",
     "stage": 1,
     "category": "음식",
@@ -815,7 +1011,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb34",
+    "id": "nb42",
     "word": "고구마",
     "stage": 3,
     "category": "음식",
@@ -844,7 +1040,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb35",
+    "id": "nb43",
     "word": "배추",
     "stage": 2,
     "category": "음식",
@@ -867,7 +1063,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb36",
+    "id": "nb44",
     "word": "가지",
     "stage": 1,
     "category": "음식",
@@ -890,7 +1086,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb37",
+    "id": "nb45",
     "word": "파",
     "stage": 1,
     "category": "음식",
@@ -907,7 +1103,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb38",
+    "id": "nb46",
     "word": "고추",
     "stage": 1,
     "category": "음식",
@@ -930,7 +1126,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb39",
+    "id": "nb47",
     "word": "고기",
     "stage": 1,
     "category": "음식",
@@ -953,7 +1149,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb40",
+    "id": "nb48",
     "word": "두부",
     "stage": 1,
     "category": "음식",
@@ -976,7 +1172,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb41",
+    "id": "nb49",
     "word": "과자",
     "stage": 2,
     "category": "음식",
@@ -999,7 +1195,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb42",
+    "id": "nb50",
     "word": "차",
     "stage": 1,
     "category": "음식",
@@ -1016,7 +1212,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb43",
+    "id": "nb51",
     "word": "치즈",
     "stage": 2,
     "category": "음식",
@@ -1039,7 +1235,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb44",
+    "id": "nb52",
     "word": "피자",
     "stage": 2,
     "category": "음식",
@@ -1062,7 +1258,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb45",
+    "id": "nb53",
     "word": "스파게티",
     "stage": 3,
     "category": "음식",
@@ -1097,7 +1293,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb46",
+    "id": "nb54",
     "word": "버터",
     "stage": 1,
     "category": "음식",
@@ -1120,7 +1316,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb47",
+    "id": "nb55",
     "word": "초코",
     "stage": 1,
     "category": "음식",
@@ -1143,7 +1339,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb48",
+    "id": "nb56",
     "word": "카레",
     "stage": 2,
     "category": "음식",
@@ -1166,7 +1362,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb49",
+    "id": "nb57",
     "word": "체리",
     "stage": 2,
     "category": "음식",
@@ -1189,7 +1385,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb50",
+    "id": "nb58",
     "word": "키위",
     "stage": 2,
     "category": "음식",
@@ -1212,7 +1408,192 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb51",
+    "id": "nb59",
+    "word": "대파",
+    "stage": 1,
+    "category": "음식",
+    "emoji": "🧅",
+    "hint": "길쭉하고 하얀 뿌리가 달린 채소",
+    "description": "크고 굵게 자란 파로, 따끈한 국물 요리에 퐁당 넣으면 국물 맛이 아주 시원해져요.",
+    "syllables": [
+      {
+        "char": "대",
+        "cho": "ㄷ",
+        "jung": "ㅐ",
+        "breakdown": "ㄷ + ㅐ"
+      },
+      {
+        "char": "파",
+        "cho": "ㅍ",
+        "jung": "ㅏ",
+        "breakdown": "ㅍ + ㅏ"
+      }
+    ]
+  },
+  {
+    "id": "nb60",
+    "word": "소시지",
+    "stage": 3,
+    "category": "음식",
+    "emoji": "🌭",
+    "hint": "탱글탱글 씹히는 맛있는 고기 반찬",
+    "description": "고기를 곱게 다져 탱글탱글하게 빚은 음식으로, 칼집을 내어 노릇하게 구워 먹으면 최고예요.",
+    "syllables": [
+      {
+        "char": "소",
+        "cho": "ㅅ",
+        "jung": "ㅗ",
+        "breakdown": "ㅅ + ㅗ"
+      },
+      {
+        "char": "시",
+        "cho": "ㅅ",
+        "jung": "ㅣ",
+        "breakdown": "ㅅ + ㅣ"
+      },
+      {
+        "char": "지",
+        "cho": "ㅈ",
+        "jung": "ㅣ",
+        "breakdown": "ㅈ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb61",
+    "word": "주스",
+    "stage": 2,
+    "category": "음식",
+    "emoji": "🧃",
+    "hint": "과일을 달콤하게 짠 시원한 음료",
+    "description": "신선한 과일을 믹서기에 윙 갈아 빨대를 꽂아 시원하게 쪽쪽 마시는 맛있는 음료예요.",
+    "syllables": [
+      {
+        "char": "주",
+        "cho": "ㅈ",
+        "jung": "ㅜ",
+        "breakdown": "ㅈ + ㅜ"
+      },
+      {
+        "char": "스",
+        "cho": "ㅅ",
+        "jung": "ㅡ",
+        "breakdown": "ㅅ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb62",
+    "word": "케이크",
+    "stage": 3,
+    "category": "음식",
+    "emoji": "🎂",
+    "hint": "생일날 촛불을 켜고 후 부는 빵",
+    "description": "하얀 생크림과 달콤한 딸기가 얹혀 있어 생일 축하 노래를 부르고 촛불을 후 부는 특별한 빵이에요.",
+    "syllables": [
+      {
+        "char": "케",
+        "cho": "ㅋ",
+        "jung": "ㅔ",
+        "breakdown": "ㅋ + ㅔ"
+      },
+      {
+        "char": "이",
+        "cho": "ㅇ",
+        "jung": "ㅣ",
+        "breakdown": "ㅇ + ㅣ"
+      },
+      {
+        "char": "크",
+        "cho": "ㅋ",
+        "jung": "ㅡ",
+        "breakdown": "ㅋ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb63",
+    "word": "쿠키",
+    "stage": 2,
+    "category": "음식",
+    "emoji": "🍪",
+    "hint": "오븐에서 고소하게 구워낸 과자",
+    "description": "별 모양, 곰돌이 모양으로 예쁘게 빚어 오븐에 바삭하게 구워 우유와 함께 먹는 간식이에요.",
+    "syllables": [
+      {
+        "char": "쿠",
+        "cho": "ㅋ",
+        "jung": "ㅜ",
+        "breakdown": "ㅋ + ㅜ"
+      },
+      {
+        "char": "키",
+        "cho": "ㅋ",
+        "jung": "ㅣ",
+        "breakdown": "ㅋ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb64",
+    "word": "코코아",
+    "stage": 3,
+    "category": "음식",
+    "emoji": "☕",
+    "hint": "겨울철에 호호 불어 마시는 따뜻한 초코 음료",
+    "description": "달콤한 초콜릿 가루를 따뜻한 우유에 사르르 녹여 마시면 온몸이 사르르 녹는 포근한 음료예요.",
+    "syllables": [
+      {
+        "char": "코",
+        "cho": "ㅋ",
+        "jung": "ㅗ",
+        "breakdown": "ㅋ + ㅗ"
+      },
+      {
+        "char": "코",
+        "cho": "ㅋ",
+        "jung": "ㅗ",
+        "breakdown": "ㅋ + ㅗ"
+      },
+      {
+        "char": "아",
+        "cho": "ㅇ",
+        "jung": "ㅏ",
+        "breakdown": "ㅇ + ㅏ"
+      }
+    ]
+  },
+  {
+    "id": "nb65",
+    "word": "샤베트",
+    "stage": 3,
+    "category": "음식",
+    "emoji": "🍧",
+    "hint": "얼음 알갱이가 사각사각 시원한 디저트",
+    "description": "과일즙을 얼려 사각사각 부드럽게 갈아낸 아이스크림으로, 입에 넣으면 사르르 녹아요.",
+    "syllables": [
+      {
+        "char": "샤",
+        "cho": "ㅅ",
+        "jung": "ㅑ",
+        "breakdown": "ㅅ + ㅑ"
+      },
+      {
+        "char": "베",
+        "cho": "ㅂ",
+        "jung": "ㅔ",
+        "breakdown": "ㅂ + ㅔ"
+      },
+      {
+        "char": "트",
+        "cho": "ㅌ",
+        "jung": "ㅡ",
+        "breakdown": "ㅌ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb66",
     "word": "나무",
     "stage": 1,
     "category": "자연",
@@ -1235,7 +1616,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb52",
+    "id": "nb67",
     "word": "소나무",
     "stage": 3,
     "category": "자연",
@@ -1264,7 +1645,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb53",
+    "id": "nb68",
     "word": "대나무",
     "stage": 3,
     "category": "자연",
@@ -1293,7 +1674,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb54",
+    "id": "nb69",
     "word": "개나리",
     "stage": 3,
     "category": "자연",
@@ -1322,7 +1703,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb55",
+    "id": "nb70",
     "word": "미나리",
     "stage": 3,
     "category": "자연",
@@ -1351,7 +1732,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb56",
+    "id": "nb71",
     "word": "도라지",
     "stage": 3,
     "category": "자연",
@@ -1380,7 +1761,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb57",
+    "id": "nb72",
     "word": "보리",
     "stage": 1,
     "category": "자연",
@@ -1403,7 +1784,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb58",
+    "id": "nb73",
     "word": "벼",
     "stage": 1,
     "category": "자연",
@@ -1420,7 +1801,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb59",
+    "id": "nb74",
     "word": "무",
     "stage": 1,
     "category": "자연",
@@ -1437,7 +1818,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb60",
+    "id": "nb75",
     "word": "대추",
     "stage": 2,
     "category": "자연",
@@ -1460,7 +1841,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb61",
+    "id": "nb76",
     "word": "파파야",
     "stage": 3,
     "category": "자연",
@@ -1489,7 +1870,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb62",
+    "id": "nb77",
     "word": "수수",
     "stage": 1,
     "category": "자연",
@@ -1512,7 +1893,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb63",
+    "id": "nb78",
     "word": "바다",
     "stage": 1,
     "category": "자연",
@@ -1535,7 +1916,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb64",
+    "id": "nb79",
     "word": "파도",
     "stage": 1,
     "category": "자연",
@@ -1558,7 +1939,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb65",
+    "id": "nb80",
     "word": "무지개",
     "stage": 3,
     "category": "자연",
@@ -1587,7 +1968,192 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb66",
+    "id": "nb81",
+    "word": "비",
+    "stage": 1,
+    "category": "자연",
+    "emoji": "🌧️",
+    "hint": "하늘에서 주룩주룩 내리는 물방울",
+    "description": "먹구름 사이로 투둑투둑 떨어져 메마른 식물들에게 시원한 물을 주는 하늘의 선물이에요.",
+    "syllables": [
+      {
+        "char": "비",
+        "cho": "ㅂ",
+        "jung": "ㅣ",
+        "breakdown": "ㅂ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb82",
+    "word": "해바라기",
+    "stage": 3,
+    "category": "자연",
+    "emoji": "🌻",
+    "hint": "해님만 바라보는 커다란 노란 꽃",
+    "description": "황금빛 커다란 꽃잎을 활짝 펴고 언제나 따뜻한 해님을 따라 고개를 돌리는 꽃이에요.",
+    "syllables": [
+      {
+        "char": "해",
+        "cho": "ㅎ",
+        "jung": "ㅐ",
+        "breakdown": "ㅎ + ㅐ"
+      },
+      {
+        "char": "바",
+        "cho": "ㅂ",
+        "jung": "ㅏ",
+        "breakdown": "ㅂ + ㅏ"
+      },
+      {
+        "char": "라",
+        "cho": "ㄹ",
+        "jung": "ㅏ",
+        "breakdown": "ㄹ + ㅏ"
+      },
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb83",
+    "word": "코스모스",
+    "stage": 3,
+    "category": "자연",
+    "emoji": "🌸",
+    "hint": "가을바람에 한들한들 춤추는 분홍 꽃",
+    "description": "가을길가에 분홍빛, 하얀빛 꽃잎을 피우고 살랑살랑 부는 바람에 반갑게 인사하는 꽃이에요.",
+    "syllables": [
+      {
+        "char": "코",
+        "cho": "ㅋ",
+        "jung": "ㅗ",
+        "breakdown": "ㅋ + ㅗ"
+      },
+      {
+        "char": "스",
+        "cho": "ㅅ",
+        "jung": "ㅡ",
+        "breakdown": "ㅅ + ㅡ"
+      },
+      {
+        "char": "모",
+        "cho": "ㅁ",
+        "jung": "ㅗ",
+        "breakdown": "ㅁ + ㅗ"
+      },
+      {
+        "char": "스",
+        "cho": "ㅅ",
+        "jung": "ㅡ",
+        "breakdown": "ㅅ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb84",
+    "word": "나리",
+    "stage": 1,
+    "category": "자연",
+    "emoji": "🌺",
+    "hint": "점박이 무늬가 고운 주황색 여름 꽃",
+    "description": "초록 풀숲 사이에서 주황빛 꽃잎을 활짝 젖히고 우아하게 피어나는 예쁜 우리 꽃이에요.",
+    "syllables": [
+      {
+        "char": "나",
+        "cho": "ㄴ",
+        "jung": "ㅏ",
+        "breakdown": "ㄴ + ㅏ"
+      },
+      {
+        "char": "리",
+        "cho": "ㄹ",
+        "jung": "ㅣ",
+        "breakdown": "ㄹ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb85",
+    "word": "모래",
+    "stage": 2,
+    "category": "자연",
+    "emoji": "🏖️",
+    "hint": "손으로 조물조물 성을 쌓는 알갱이",
+    "description": "바닷가나 놀이터에 부드럽게 깔려 있어 두꺼비집도 짓고 멋진 성도 만드는 작은 흙 알갱이예요.",
+    "syllables": [
+      {
+        "char": "모",
+        "cho": "ㅁ",
+        "jung": "ㅗ",
+        "breakdown": "ㅁ + ㅗ"
+      },
+      {
+        "char": "래",
+        "cho": "ㄹ",
+        "jung": "ㅐ",
+        "breakdown": "ㄹ + ㅐ"
+      }
+    ]
+  },
+  {
+    "id": "nb86",
+    "word": "서리",
+    "stage": 1,
+    "category": "자연",
+    "emoji": "❄️",
+    "hint": "가을 아침 풀잎에 맺히는 하얀 얼음 가루",
+    "description": "쌀쌀한 늦가을 아침, 풀잎 위에 하얀 소금 가루처럼 곱게 내려앉는 얇은 얼음이에요.",
+    "syllables": [
+      {
+        "char": "서",
+        "cho": "ㅅ",
+        "jung": "ㅓ",
+        "breakdown": "ㅅ + ㅓ"
+      },
+      {
+        "char": "리",
+        "cho": "ㄹ",
+        "jung": "ㅣ",
+        "breakdown": "ㄹ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb87",
+    "word": "메아리",
+    "stage": 3,
+    "category": "자연",
+    "emoji": "⛰️",
+    "hint": "산에서 '야호' 외치면 되돌아오는 소리",
+    "description": "높은 산꼭대기에서 큰 소리로 외치면 산봉우리에 부딪혀 똑같이 되돌아오는 신기한 소리예요.",
+    "syllables": [
+      {
+        "char": "메",
+        "cho": "ㅁ",
+        "jung": "ㅔ",
+        "breakdown": "ㅁ + ㅔ"
+      },
+      {
+        "char": "아",
+        "cho": "ㅇ",
+        "jung": "ㅏ",
+        "breakdown": "ㅇ + ㅏ"
+      },
+      {
+        "char": "리",
+        "cho": "ㄹ",
+        "jung": "ㅣ",
+        "breakdown": "ㄹ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb88",
     "word": "모자",
     "stage": 1,
     "category": "사물",
@@ -1610,7 +2176,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb67",
+    "id": "nb89",
     "word": "구두",
     "stage": 1,
     "category": "사물",
@@ -1633,7 +2199,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb68",
+    "id": "nb90",
     "word": "치마",
     "stage": 1,
     "category": "사물",
@@ -1656,7 +2222,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb69",
+    "id": "nb91",
     "word": "바지",
     "stage": 1,
     "category": "사물",
@@ -1679,7 +2245,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb70",
+    "id": "nb92",
     "word": "저고리",
     "stage": 3,
     "category": "사물",
@@ -1708,7 +2274,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb71",
+    "id": "nb93",
     "word": "비누",
     "stage": 1,
     "category": "사물",
@@ -1731,7 +2297,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb72",
+    "id": "nb94",
     "word": "휴지",
     "stage": 2,
     "category": "사물",
@@ -1754,7 +2320,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb73",
+    "id": "nb95",
     "word": "피아노",
     "stage": 3,
     "category": "사물",
@@ -1783,7 +2349,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb74",
+    "id": "nb96",
     "word": "라디오",
     "stage": 3,
     "category": "사물",
@@ -1812,7 +2378,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb75",
+    "id": "nb97",
     "word": "시계",
     "stage": 2,
     "category": "사물",
@@ -1835,7 +2401,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb76",
+    "id": "nb98",
     "word": "바구니",
     "stage": 3,
     "category": "사물",
@@ -1864,7 +2430,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb77",
+    "id": "nb99",
     "word": "주머니",
     "stage": 3,
     "category": "사물",
@@ -1893,7 +2459,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb78",
+    "id": "nb100",
     "word": "가위",
     "stage": 2,
     "category": "사물",
@@ -1916,7 +2482,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb79",
+    "id": "nb101",
     "word": "의자",
     "stage": 2,
     "category": "사물",
@@ -1939,7 +2505,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb80",
+    "id": "nb102",
     "word": "지도",
     "stage": 1,
     "category": "사물",
@@ -1962,7 +2528,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb81",
+    "id": "nb103",
     "word": "지우개",
     "stage": 3,
     "category": "사물",
@@ -1991,7 +2557,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb82",
+    "id": "nb104",
     "word": "도화지",
     "stage": 3,
     "category": "사물",
@@ -2020,7 +2586,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb83",
+    "id": "nb105",
     "word": "자",
     "stage": 1,
     "category": "사물",
@@ -2037,7 +2603,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb84",
+    "id": "nb106",
     "word": "조끼",
     "stage": 2,
     "category": "사물",
@@ -2060,7 +2626,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb85",
+    "id": "nb107",
     "word": "부채",
     "stage": 2,
     "category": "사물",
@@ -2083,7 +2649,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb86",
+    "id": "nb108",
     "word": "보자기",
     "stage": 3,
     "category": "사물",
@@ -2112,7 +2678,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb87",
+    "id": "nb109",
     "word": "소쿠리",
     "stage": 3,
     "category": "사물",
@@ -2141,7 +2707,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb88",
+    "id": "nb110",
     "word": "튜브",
     "stage": 2,
     "category": "사물",
@@ -2164,7 +2730,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb89",
+    "id": "nb111",
     "word": "카메라",
     "stage": 3,
     "category": "사물",
@@ -2193,7 +2759,296 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb90",
+    "id": "nb112",
+    "word": "기타",
+    "stage": 2,
+    "category": "사물",
+    "emoji": "🎸",
+    "hint": "여섯 줄을 튕기며 노래 부르는 악기",
+    "description": "손가락으로 팽팽한 줄을 딩가딩가 튕기면 경쾌하고 멋진 멜로디가 울려 퍼지는 악기예요.",
+    "syllables": [
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      },
+      {
+        "char": "타",
+        "cho": "ㅌ",
+        "jung": "ㅏ",
+        "breakdown": "ㅌ + ㅏ"
+      }
+    ]
+  },
+  {
+    "id": "nb113",
+    "word": "피리",
+    "stage": 2,
+    "category": "사물",
+    "emoji": "🪈",
+    "hint": "입으로 후 불면 삐리리 소리 나는 악기",
+    "description": "구멍을 손가락으로 막았다 떼며 입으로 숨을 후 불어 맑고 높은 소리를 내는 악기예요.",
+    "syllables": [
+      {
+        "char": "피",
+        "cho": "ㅍ",
+        "jung": "ㅣ",
+        "breakdown": "ㅍ + ㅣ"
+      },
+      {
+        "char": "리",
+        "cho": "ㄹ",
+        "jung": "ㅣ",
+        "breakdown": "ㄹ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb114",
+    "word": "하모니카",
+    "stage": 3,
+    "category": "사물",
+    "emoji": "🎶",
+    "hint": "입에 대고 숨을 들이쉬고 내쉬며 불어요",
+    "description": "손에 쏙 들어오는 작은 악기로, 들숨과 날숨에 맞춰 입술을 움직이면 다정한 소리가 나요.",
+    "syllables": [
+      {
+        "char": "하",
+        "cho": "ㅎ",
+        "jung": "ㅏ",
+        "breakdown": "ㅎ + ㅏ"
+      },
+      {
+        "char": "모",
+        "cho": "ㅁ",
+        "jung": "ㅗ",
+        "breakdown": "ㅁ + ㅗ"
+      },
+      {
+        "char": "니",
+        "cho": "ㄴ",
+        "jung": "ㅣ",
+        "breakdown": "ㄴ + ㅣ"
+      },
+      {
+        "char": "카",
+        "cho": "ㅋ",
+        "jung": "ㅏ",
+        "breakdown": "ㅋ + ㅏ"
+      }
+    ]
+  },
+  {
+    "id": "nb115",
+    "word": "베개",
+    "stage": 2,
+    "category": "사물",
+    "emoji": "🛏️",
+    "hint": "잠잘 때 머리를 폭신하게 받쳐줘요",
+    "description": "솜이나 깃털이 푹신하게 들어 있어 밤에 잘 때 머리를 대면 좋은 꿈나라로 안내해 줘요.",
+    "syllables": [
+      {
+        "char": "베",
+        "cho": "ㅂ",
+        "jung": "ㅔ",
+        "breakdown": "ㅂ + ㅔ"
+      },
+      {
+        "char": "개",
+        "cho": "ㄱ",
+        "jung": "ㅐ",
+        "breakdown": "ㄱ + ㅐ"
+      }
+    ]
+  },
+  {
+    "id": "nb116",
+    "word": "도자기",
+    "stage": 3,
+    "category": "사물",
+    "emoji": "🏺",
+    "hint": "흙을 빚어 가마에 구워낸 고운 그릇",
+    "description": "고운 흙을 물레로 빙빙 돌려 예쁜 모양으로 빚은 뒤 뜨거운 불에 구워낸 아름다운 그릇이에요.",
+    "syllables": [
+      {
+        "char": "도",
+        "cho": "ㄷ",
+        "jung": "ㅗ",
+        "breakdown": "ㄷ + ㅗ"
+      },
+      {
+        "char": "자",
+        "cho": "ㅈ",
+        "jung": "ㅏ",
+        "breakdown": "ㅈ + ㅏ"
+      },
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb117",
+    "word": "바가지",
+    "stage": 3,
+    "category": "사물",
+    "emoji": "🥣",
+    "hint": "물을 찰방찰방 시원하게 퍼내는 그릇",
+    "description": "둥근 박을 반으로 쪼개어 만든 그릇으로, 시원한 물을 가득 퍼 담을 때 사용해요.",
+    "syllables": [
+      {
+        "char": "바",
+        "cho": "ㅂ",
+        "jung": "ㅏ",
+        "breakdown": "ㅂ + ㅏ"
+      },
+      {
+        "char": "가",
+        "cho": "ㄱ",
+        "jung": "ㅏ",
+        "breakdown": "ㄱ + ㅏ"
+      },
+      {
+        "char": "지",
+        "cho": "ㅈ",
+        "jung": "ㅣ",
+        "breakdown": "ㅈ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb118",
+    "word": "포크",
+    "stage": 1,
+    "category": "사물",
+    "emoji": "🍴",
+    "hint": "음식을 콕 찍어 먹는 쇠갈퀴 도구",
+    "description": "끝이 뾰족뾰족 세 갈래로 나뉘어 있어 달콤한 과일이나 스파게티를 콕 집어 먹을 때 써요.",
+    "syllables": [
+      {
+        "char": "포",
+        "cho": "ㅍ",
+        "jung": "ㅗ",
+        "breakdown": "ㅍ + ㅗ"
+      },
+      {
+        "char": "크",
+        "cho": "ㅋ",
+        "jung": "ㅡ",
+        "breakdown": "ㅋ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb119",
+    "word": "수저",
+    "stage": 1,
+    "category": "사물",
+    "emoji": "🥢",
+    "hint": "밥과 국을 먹는 숟가락과 젓가락",
+    "description": "식탁에서 국을 떠먹고 반찬을 집어 먹는 우리들의 매일매일 식사 짝꿍이에요.",
+    "syllables": [
+      {
+        "char": "수",
+        "cho": "ㅅ",
+        "jung": "ㅜ",
+        "breakdown": "ㅅ + ㅜ"
+      },
+      {
+        "char": "저",
+        "cho": "ㅈ",
+        "jung": "ㅓ",
+        "breakdown": "ㅈ + ㅓ"
+      }
+    ]
+  },
+  {
+    "id": "nb120",
+    "word": "노트",
+    "stage": 1,
+    "category": "사물",
+    "emoji": "📓",
+    "hint": "연필로 글씨와 그림을 적는 공책",
+    "description": "하얀 종이들이 차곡차곡 묶여 있어 배운 공부와 일기를 또박또박 적는 소중한 책이에요.",
+    "syllables": [
+      {
+        "char": "노",
+        "cho": "ㄴ",
+        "jung": "ㅗ",
+        "breakdown": "ㄴ + ㅗ"
+      },
+      {
+        "char": "트",
+        "cho": "ㅌ",
+        "jung": "ㅡ",
+        "breakdown": "ㅌ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb121",
+    "word": "테이프",
+    "stage": 3,
+    "category": "사물",
+    "emoji": "🩹",
+    "hint": "종이를 척척 이어 붙이는 끈끈이 띠",
+    "description": "한쪽 면에 접착제가 묻어 있어 찢어진 종이를 감쪽같이 찰싹 붙여주는 도구예요.",
+    "syllables": [
+      {
+        "char": "테",
+        "cho": "ㅌ",
+        "jung": "ㅔ",
+        "breakdown": "ㅌ + ㅔ"
+      },
+      {
+        "char": "이",
+        "cho": "ㅇ",
+        "jung": "ㅣ",
+        "breakdown": "ㅇ + ㅣ"
+      },
+      {
+        "char": "프",
+        "cho": "ㅍ",
+        "jung": "ㅡ",
+        "breakdown": "ㅍ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb122",
+    "word": "마스크",
+    "stage": 3,
+    "category": "사물",
+    "emoji": "😷",
+    "hint": "코와 입을 가려 먼지와 감기를 막아요",
+    "description": "귀에 끈을 걸고 코와 입을 가려 미세먼지와 감기 바이러스로부터 우리를 지켜줘요.",
+    "syllables": [
+      {
+        "char": "마",
+        "cho": "ㅁ",
+        "jung": "ㅏ",
+        "breakdown": "ㅁ + ㅏ"
+      },
+      {
+        "char": "스",
+        "cho": "ㅅ",
+        "jung": "ㅡ",
+        "breakdown": "ㅅ + ㅡ"
+      },
+      {
+        "char": "크",
+        "cho": "ㅋ",
+        "jung": "ㅡ",
+        "breakdown": "ㅋ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb123",
     "word": "기차",
     "stage": 2,
     "category": "탈것",
@@ -2216,7 +3071,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb91",
+    "id": "nb124",
     "word": "버스",
     "stage": 1,
     "category": "탈것",
@@ -2239,7 +3094,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb92",
+    "id": "nb125",
     "word": "마차",
     "stage": 1,
     "category": "탈것",
@@ -2262,7 +3117,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb93",
+    "id": "nb126",
     "word": "오토바이",
     "stage": 4,
     "category": "탈것",
@@ -2297,7 +3152,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb94",
+    "id": "nb127",
     "word": "유모차",
     "stage": 3,
     "category": "탈것",
@@ -2326,7 +3181,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb95",
+    "id": "nb128",
     "word": "그네",
     "stage": 2,
     "category": "탈것",
@@ -2349,7 +3204,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb96",
+    "id": "nb129",
     "word": "시소",
     "stage": 1,
     "category": "탈것",
@@ -2372,7 +3227,203 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb97",
+    "id": "nb130",
+    "word": "보트",
+    "stage": 1,
+    "category": "탈것",
+    "emoji": "🚤",
+    "hint": "물 위를 통통 빠르게 달리는 작은 배",
+    "description": "호수나 강물 위에서 노를 젓거나 모터를 돌려 시원한 물살을 가르며 나아가는 배예요.",
+    "syllables": [
+      {
+        "char": "보",
+        "cho": "ㅂ",
+        "jung": "ㅗ",
+        "breakdown": "ㅂ + ㅗ"
+      },
+      {
+        "char": "트",
+        "cho": "ㅌ",
+        "jung": "ㅡ",
+        "breakdown": "ㅌ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb131",
+    "word": "요트",
+    "stage": 1,
+    "category": "탈것",
+    "emoji": "⛵",
+    "hint": "하얀 돛을 달고 바람으로 움직이는 배",
+    "description": "바람을 돛에 듬뿍 품어 푸른 바다를 미끄러지듯 유유히 항해하는 멋진 배예요.",
+    "syllables": [
+      {
+        "char": "요",
+        "cho": "ㅇ",
+        "jung": "ㅛ",
+        "breakdown": "ㅇ + ㅛ"
+      },
+      {
+        "char": "트",
+        "cho": "ㅌ",
+        "jung": "ㅡ",
+        "breakdown": "ㅌ + ㅡ"
+      }
+    ]
+  },
+  {
+    "id": "nb132",
+    "word": "스키",
+    "stage": 2,
+    "category": "탈것",
+    "emoji": "🎿",
+    "hint": "하얀 눈 위를 미끄러져 내려오는 판",
+    "description": "겨울철 하얀 눈 덮인 언덕을 긴 플레이트를 발에 달고 바람처럼 씽씽 미끄러져 내려와요.",
+    "syllables": [
+      {
+        "char": "스",
+        "cho": "ㅅ",
+        "jung": "ㅡ",
+        "breakdown": "ㅅ + ㅡ"
+      },
+      {
+        "char": "키",
+        "cho": "ㅋ",
+        "jung": "ㅣ",
+        "breakdown": "ㅋ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb133",
+    "word": "요요",
+    "stage": 1,
+    "category": "탈것",
+    "emoji": "🪀",
+    "hint": "실을 감았다 풀며 오르락내리락하는 장난감",
+    "description": "손가락에 실을 걸고 툭 던지면 팽그르르 돌며 손으로 다시 쏙 돌아오는 재미있는 놀이예요.",
+    "syllables": [
+      {
+        "char": "요",
+        "cho": "ㅇ",
+        "jung": "ㅛ",
+        "breakdown": "ㅇ + ㅛ"
+      },
+      {
+        "char": "요",
+        "cho": "ㅇ",
+        "jung": "ㅛ",
+        "breakdown": "ㅇ + ㅛ"
+      }
+    ]
+  },
+  {
+    "id": "nb134",
+    "word": "주사위",
+    "stage": 3,
+    "category": "탈것",
+    "emoji": "🎲",
+    "hint": "육면에 점이 콕콕 박혀 굴리는 큐브",
+    "description": "손에 쥐고 데굴데굴 굴리면 일부터 육까지 점이 나와 보드게임을 신나게 즐길 수 있어요.",
+    "syllables": [
+      {
+        "char": "주",
+        "cho": "ㅈ",
+        "jung": "ㅜ",
+        "breakdown": "ㅈ + ㅜ"
+      },
+      {
+        "char": "사",
+        "cho": "ㅅ",
+        "jung": "ㅏ",
+        "breakdown": "ㅅ + ㅏ"
+      },
+      {
+        "char": "위",
+        "cho": "ㅇ",
+        "jung": "ㅟ",
+        "breakdown": "ㅇ + ㅟ"
+      }
+    ]
+  },
+  {
+    "id": "nb135",
+    "word": "도미노",
+    "stage": 3,
+    "category": "탈것",
+    "emoji": "🁢",
+    "hint": "하나를 톡 쓰러뜨리면 차례로 와르르",
+    "description": "직사각형 블록을 길게 세워두고 맨 앞 블록을 톡 건드리면 차례로 파도타듯 쓰러져요.",
+    "syllables": [
+      {
+        "char": "도",
+        "cho": "ㄷ",
+        "jung": "ㅗ",
+        "breakdown": "ㄷ + ㅗ"
+      },
+      {
+        "char": "미",
+        "cho": "ㅁ",
+        "jung": "ㅣ",
+        "breakdown": "ㅁ + ㅣ"
+      },
+      {
+        "char": "노",
+        "cho": "ㄴ",
+        "jung": "ㅗ",
+        "breakdown": "ㄴ + ㅗ"
+      }
+    ]
+  },
+  {
+    "id": "nb136",
+    "word": "제기",
+    "stage": 2,
+    "category": "탈것",
+    "emoji": "🪶",
+    "hint": "발로 툭툭 차올리는 전통 놀이",
+    "description": "엽전에 한지를 감싸 술을 달아 발 안쪽으로 '하나 둘 셋' 떨어뜨리지 않고 차올리는 놀이예요.",
+    "syllables": [
+      {
+        "char": "제",
+        "cho": "ㅈ",
+        "jung": "ㅔ",
+        "breakdown": "ㅈ + ㅔ"
+      },
+      {
+        "char": "기",
+        "cho": "ㄱ",
+        "jung": "ㅣ",
+        "breakdown": "ㄱ + ㅣ"
+      }
+    ]
+  },
+  {
+    "id": "nb137",
+    "word": "레고",
+    "stage": 2,
+    "category": "탈것",
+    "emoji": "🧱",
+    "hint": "알록달록 블록을 끼워 무엇이든 만들어요",
+    "description": "네모난 블록들을 찰칵찰칵 조립하여 비행기, 성, 자동차를 무한대로 만드는 블록 장난감이에요.",
+    "syllables": [
+      {
+        "char": "레",
+        "cho": "ㄹ",
+        "jung": "ㅔ",
+        "breakdown": "ㄹ + ㅔ"
+      },
+      {
+        "char": "고",
+        "cho": "ㄱ",
+        "jung": "ㅗ",
+        "breakdown": "ㄱ + ㅗ"
+      }
+    ]
+  },
+  {
+    "id": "nb138",
     "word": "머리",
     "stage": 1,
     "category": "신체",
@@ -2395,7 +3446,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb98",
+    "id": "nb139",
     "word": "이마",
     "stage": 1,
     "category": "신체",
@@ -2418,7 +3469,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb99",
+    "id": "nb140",
     "word": "코",
     "stage": 1,
     "category": "신체",
@@ -2435,7 +3486,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb100",
+    "id": "nb141",
     "word": "귀",
     "stage": 1,
     "category": "신체",
@@ -2452,7 +3503,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb101",
+    "id": "nb142",
     "word": "치아",
     "stage": 1,
     "category": "신체",
@@ -2475,7 +3526,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb102",
+    "id": "nb143",
     "word": "다리",
     "stage": 1,
     "category": "신체",
@@ -2498,7 +3549,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb103",
+    "id": "nb144",
     "word": "허리",
     "stage": 1,
     "category": "신체",
@@ -2521,7 +3572,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb104",
+    "id": "nb145",
     "word": "배",
     "stage": 1,
     "category": "신체",
@@ -2538,7 +3589,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb105",
+    "id": "nb146",
     "word": "피부",
     "stage": 1,
     "category": "신체",
@@ -2561,7 +3612,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb106",
+    "id": "nb147",
     "word": "어깨",
     "stage": 2,
     "category": "신체",
@@ -2584,7 +3635,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb107",
+    "id": "nb148",
     "word": "아기",
     "stage": 1,
     "category": "가족",
@@ -2607,7 +3658,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb108",
+    "id": "nb149",
     "word": "아이",
     "stage": 1,
     "category": "가족",
@@ -2630,7 +3681,7 @@ export const NO_BATCHIM_VOCAB = [
     ]
   },
   {
-    "id": "nb109",
+    "id": "nb150",
     "word": "어머니",
     "stage": 3,
     "category": "가족",
@@ -2655,201 +3706,6 @@ export const NO_BATCHIM_VOCAB = [
         "cho": "ㄴ",
         "jung": "ㅣ",
         "breakdown": "ㄴ + ㅣ"
-      }
-    ]
-  },
-  {
-    "id": "nb110",
-    "word": "아버지",
-    "stage": 3,
-    "category": "가족",
-    "emoji": "👨",
-    "hint": "든든하게 지켜주시는 멋진 아빠",
-    "description": "높은 산처럼 든든한 어깨로 우리 가족을 사랑으로 지켜주시고 함께 놀아주시는 멋진 분이에요.",
-    "syllables": [
-      {
-        "char": "아",
-        "cho": "ㅇ",
-        "jung": "ㅏ",
-        "breakdown": "ㅇ + ㅏ"
-      },
-      {
-        "char": "버",
-        "cho": "ㅂ",
-        "jung": "ㅓ",
-        "breakdown": "ㅂ + ㅓ"
-      },
-      {
-        "char": "지",
-        "cho": "ㅈ",
-        "jung": "ㅣ",
-        "breakdown": "ㅈ + ㅣ"
-      }
-    ]
-  },
-  {
-    "id": "nb111",
-    "word": "누나",
-    "stage": 1,
-    "category": "가족",
-    "emoji": "👧",
-    "hint": "남동생을 다정하게 챙겨주는 손위 여자 형제",
-    "description": "동생에게 재미있는 그림책도 읽어주고 사이좋게 놀아주는 친절하고 다정한 손위 여자 형제예요.",
-    "syllables": [
-      {
-        "char": "누",
-        "cho": "ㄴ",
-        "jung": "ㅜ",
-        "breakdown": "ㄴ + ㅜ"
-      },
-      {
-        "char": "나",
-        "cho": "ㄴ",
-        "jung": "ㅏ",
-        "breakdown": "ㄴ + ㅏ"
-      }
-    ]
-  },
-  {
-    "id": "nb112",
-    "word": "오빠",
-    "stage": 2,
-    "category": "가족",
-    "emoji": "👦",
-    "hint": "여동생을 든든하게 지켜주는 손위 남자 형제",
-    "description": "손을 꼭 잡고 학교에 함께 가주며 동생을 씩씩하게 도와주는 멋진 손위 남자 형제예요.",
-    "syllables": [
-      {
-        "char": "오",
-        "cho": "ㅇ",
-        "jung": "ㅗ",
-        "breakdown": "ㅇ + ㅗ"
-      },
-      {
-        "char": "빠",
-        "cho": "ㅃ",
-        "jung": "ㅏ",
-        "breakdown": "ㅃ + ㅏ"
-      }
-    ]
-  },
-  {
-    "id": "nb113",
-    "word": "아우",
-    "stage": 1,
-    "category": "가족",
-    "emoji": "🧒",
-    "hint": "나보다 나이가 어린 동생",
-    "description": "나를 졸졸 따라다니며 언니, 오빠, 형을 가장 멋지다고 좋아하는 귀여운 동생을 뜻하는 순우리말이에요.",
-    "syllables": [
-      {
-        "char": "아",
-        "cho": "ㅇ",
-        "jung": "ㅏ",
-        "breakdown": "ㅇ + ㅏ"
-      },
-      {
-        "char": "우",
-        "cho": "ㅇ",
-        "jung": "ㅜ",
-        "breakdown": "ㅇ + ㅜ"
-      }
-    ]
-  },
-  {
-    "id": "nb114",
-    "word": "이모",
-    "stage": 1,
-    "category": "가족",
-    "emoji": "👩‍🦰",
-    "hint": "엄마의 다정한 자매",
-    "description": "엄마의 언니나 여동생으로, 우리 집에 놀러 오실 때마다 맛있는 간식과 웃음을 선물해 주세요.",
-    "syllables": [
-      {
-        "char": "이",
-        "cho": "ㅇ",
-        "jung": "ㅣ",
-        "breakdown": "ㅇ + ㅣ"
-      },
-      {
-        "char": "모",
-        "cho": "ㅁ",
-        "jung": "ㅗ",
-        "breakdown": "ㅁ + ㅗ"
-      }
-    ]
-  },
-  {
-    "id": "nb115",
-    "word": "고모",
-    "stage": 1,
-    "category": "가족",
-    "emoji": "👱‍♀️",
-    "hint": "아빠의 다정한 자매",
-    "description": "아빠의 누나나 여동생으로, 나를 볼 때마다 '참 예쁘다' 칭찬해주시는 고마운 친척 어른이에요.",
-    "syllables": [
-      {
-        "char": "고",
-        "cho": "ㄱ",
-        "jung": "ㅗ",
-        "breakdown": "ㄱ + ㅗ"
-      },
-      {
-        "char": "모",
-        "cho": "ㅁ",
-        "jung": "ㅗ",
-        "breakdown": "ㅁ + ㅗ"
-      }
-    ]
-  },
-  {
-    "id": "nb116",
-    "word": "소",
-    "stage": 1,
-    "category": "동물",
-    "emoji": "🐂",
-    "hint": "음머 울며 착하고 힘이 센 동물",
-    "description": "커다란 눈망울로 '음머~' 소리 내며 풀을 맛있게 먹고 우유를 선물해 주는 고마운 동물이에요.",
-    "syllables": [
-      {
-        "char": "소",
-        "cho": "ㅅ",
-        "jung": "ㅗ",
-        "breakdown": "ㅅ + ㅗ"
-      }
-    ]
-  },
-  {
-    "id": "nb117",
-    "word": "비",
-    "stage": 1,
-    "category": "자연",
-    "emoji": "🌧️",
-    "hint": "하늘에서 주룩주룩 내리는 물방울",
-    "description": "먹구름 사이로 투둑투둑 떨어져 메마른 식물들에게 시원한 물을 주는 하늘의 선물이에요.",
-    "syllables": [
-      {
-        "char": "비",
-        "cho": "ㅂ",
-        "jung": "ㅣ",
-        "breakdown": "ㅂ + ㅣ"
-      }
-    ]
-  },
-  {
-    "id": "nb118",
-    "word": "새",
-    "stage": 2,
-    "category": "동물",
-    "emoji": "🕊️",
-    "hint": "하늘을 펄펄 날아다니는 날개 달린 동물",
-    "description": "가벼운 날개로 파란 하늘을 훨훨 날아다니며 나뭇가지에 앉아 맑은 소리로 노래해요.",
-    "syllables": [
-      {
-        "char": "새",
-        "cho": "ㅅ",
-        "jung": "ㅐ",
-        "breakdown": "ㅅ + ㅐ"
       }
     ]
   }
